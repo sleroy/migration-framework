@@ -1,0 +1,18 @@
+@startuml
+
+title Components - Component Diagram
+
+[Workspace]
+[FileResource]
+[Resource]
+[Decorator]
+[DecoratedResource]
+
+Workspace *--> FileResource : contains
+FileResource ..> Resource : extends
+Decorator --> FileResource : scan
+DecoratedResource --> FileResource
+Decorator --> DecoratedResource : decorate
+
+
+@enduml
