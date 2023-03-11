@@ -7,7 +7,9 @@ title Components - Component Diagram
 [Resource]
 [Decorator]
 [DecoratedResource]
+[Parser]
 
+Parser --> Workspace : decoration lookup
 Workspace *--> FileResource : contains
 FileResource ..> Resource : extends
 Decorator --> FileResource : scan
